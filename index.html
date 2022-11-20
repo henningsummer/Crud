@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>
+   CRUD Todo
+</h1>
+
+  <form>
+        <label for="task">Task</label>
+  <input required="required" oninvalid="this.setCustomValidity('Inform a task')"  
+    onvalid="this.setCustomValidity('Ok')"   
+    onchange="this.setCustomValidity('')" id="task" type="text" name="task" value="" />
+        <label  id="lb" for="status">Task status</label>
+  <input type="checkbox" id="status" name="status"/>
+
+  <input id="id" type="hidden" value="" />
+  <input id="save" type="submit" value="Salvar" />
+  <input id="del" onclick="delTask()" type="button" value="Deletar" />
+  </form>
+  <br />
+<div id="data">
+   <table>
+      <tr >
+         <th> Task</th>
+         <th> Status</th>
+         <th> Action</th>
+
+      </tr>
+
+    <div id="bdata">
+      <tbody id="dtable" ></tbody>
+    </div>
+   </table>
+   
+</div>
+
+
+
+  
+  <script src="script.js"></script>
+
+ <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
+</body>
+
+</html>
